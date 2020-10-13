@@ -42,28 +42,28 @@ void maleta::proceso(void){
 	utilidad=(ventaT-impuesto-costoTP);			
 }
 void maleta::salida(void){  //Definición del método de entrada
-	cout<<"\nMarca "<<marca<<endl;
-	cout<<"Color "<<color<<endl;
-	cout<<"Material "<<material<<endl;
+	cout<<"\nMarca : "<<marca<<endl;
+	cout<<"Color : "<<color<<endl;
+	cout<<"Material : "<<material<<endl;
 	cout<<"Precio : $ "<<precio<<endl;
-	cout<<"\nCosto produccion : - - - - - - - $ "<<costoPROD<<endl;
-	cout<<"Costo total materia prima : - -  $ "<<costoTMP<<endl;	
+	cout<<"\nCosto produccion : - - - - - - - $ "<<"  "<<costoPROD<<endl;
+	cout<<"Costo total materia prima : - - -$ "<<costoTMP<<endl;	
 	cout<<"Costo total mano de obra : - - - $ "<<costoTMO<<endl;	
-	cout<<"Costo total accesorios : - - - - $ "<<costoTACC<<endl;	
-	cout<<"Costo total imprevistos : - - - -$ "<<costoTI<<endl;	
+	cout<<"Costo total accesorios : - - - - $ "<<" "<<costoTACC<<endl;	
+	cout<<"Costo total imprevistos : - - - -$ "<<" "<<costoTI<<endl;	
 	cout<<"Costo total servicios : - - - - -$ "<<costoTS<<endl;	
 	cout<<"__________________________________________ "<<endl;
 	cout<<"Costo total produccion : - - - - $ "<<costoTP<<endl;	
 	cout<<"__________________________________________ "<<endl;	
 	cout<<"\nTotal ventas : - - - - - - $ "<<ventaT<<endl;	
-	cout<<"Impuesto a pagar : - - - - $ "<<impuesto<<endl;	
-	cout<<"Utilidades : - - - - - - - $ "<<utilidad<<endl;	
+	cout<<"Impuesto a pagar : - - - - $ "<<" "<<impuesto<<endl;	
+	cout<<"Utilidades : - - - - - - - $ "<<" "<<utilidad<<endl;	
 }
 int main(){
 	maleta morral; //declarando objetos para (maleta)
 	morral.entrada(); //invocacion metodo de entrada
 	morral.proceso();
 	morral.salida();
-  //  system("pause");
+    system("pause");
     return 0;
 }
