@@ -13,7 +13,7 @@ class maleta{
 	private:
 		float iva=0.19;
 		char marca[30], color[12], material[30]; //declaración de variables en private siempre
-		int precio=125000,manoobra=26250,costoPROD=75000,materiaprima=28500,acc=3750,servicios=11250,imprevistos=5250,costoTP,costoTMP,costoTMO,costoTACC,costoTI,costoTS,ventaT,impuesto,utilidad;
+		int precio=125000,manoobra,costoPROD=75000,materiaprima,acc,servicios,imprevistos,costoTP,costoTMP,costoTMO,costoTACC,costoTI,costoTS,ventaT,impuesto,utilidad;
 	public:
 		void entrada(void); //declaración de métodos que no reciben ni retornan
 		void proceso(void);
@@ -27,10 +27,14 @@ void maleta::entrada(void){  //Definición del método de entrada
 	cout<<"Digite material "<<endl;
 	gets(material);
 //	cout<<"Digite precio "<<endl;
-	cout<<"Precio maleta : "<<precio<<endl;
 //	cin>>precio;
 }
-void maleta::proceso(void){
+void maleta::proceso(void){ //Definicion del metodo proceso
+	materiaprima=(costoPROD*0.38);
+	manoobra=(costoPROD*0.35);
+	acc=(costoPROD*0.05);
+	servicios=(costoPROD*0.15);
+	imprevistos=(costoPROD*0.07);
 	costoTMP=materiaprima*125;
 	costoTMO=manoobra*125;
 	costoTACC=acc*125;
@@ -41,7 +45,7 @@ void maleta::proceso(void){
 	impuesto=(ventaT*iva);
 	utilidad=(ventaT-impuesto-costoTP);			
 }
-void maleta::salida(void){  //Definición del método de entrada
+void maleta::salida(void){  //Definición del método de salida
 	cout<<"\nMarca : "<<marca<<endl;
 	cout<<"Color : "<<color<<endl;
 	cout<<"Material : "<<material<<endl;
@@ -62,8 +66,8 @@ void maleta::salida(void){  //Definición del método de entrada
 int main(){
 	maleta morral; //declarando objetos para (maleta)
 	morral.entrada(); //invocacion metodo de entrada
-	morral.proceso();
-	morral.salida();
+	morral.proceso(); //invocacion metodo de proceso
+	morral.salida(); //invocacion metodo de salida
     system("pause");
     return 0;
 }
